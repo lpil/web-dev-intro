@@ -3,7 +3,7 @@ require 'pathname'
 require 'markdown_document'
 
 RSpec.describe 'inline Ruby code' do
-  markdown_pattern = File.join(ROOT_PATH, '**', '*.md')
+  markdown_pattern = File.join(ROOT_PATH, 'source', '**', '*.md')
   markdown_paths   = Dir.glob markdown_pattern
 
   markdown_paths.each do |path|
