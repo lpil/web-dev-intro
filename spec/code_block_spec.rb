@@ -65,4 +65,24 @@ RSpec.describe CodeBlock do
       block.valid_syntax?
     end
   end
+
+  describe 'equality' do
+    it 'is equal with the same attrs' do
+      a = described_class.new code: '1 + 1', language: 'elixir'
+      b = described_class.new code: '1 + 1', language: 'Elixir'
+      expect(a).to eq b
+    end
+
+    it 'is not equal with different code' do
+      a = described_class.new code: '1 + 1', language: 'Elixir'
+      b = described_class.new code: '2 + 1', language: 'Elixir'
+      expect(a).not_to eq b
+    end
+
+    it 'is not equal with different language' do
+      a = described_class.new code: '1 + 1', language: 'Elixir'
+      b = described_class.new code: '1 + 1', language: 'Ruby'
+      expect(a).not_to eq b
+    end
+  end
 end
