@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Introduction to Sinatra
+title: An Introduction to Sinatra
 ---
 
 ## What is Sinatra?

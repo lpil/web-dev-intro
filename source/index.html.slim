@@ -1,5 +1,5 @@
----
-title: Home, yo
----
+h1 Hi
 
-h1 Hi there
+ul
+  - data.tutorials.each do |path, attrs|
+    li= link_to attrs['title'], path

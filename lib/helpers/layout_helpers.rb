@@ -1,8 +1,8 @@
 module LayoutHelpers
-  def page_title(page)
-    title = page.data[:title]
-    if title
-      "TODO - #{title}"
+  def page_title(data, page)
+    attrs = data.tutorials[page.url]
+    if attrs && attrs['title']
+      "TODO - #{attrs['title']}"
     else
       'TODO'
     end
