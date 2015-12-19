@@ -1,0 +1,27 @@
+language: ruby
+rvm:
+  - 2.2.2
+
+script:
+  - bundle exec rspec
+  - bundle exec middleman build
+
+sudo: false
+
+notifications:
+  email: false
+
+deploy:
+  provider: s3
+  access_key_id: AKIAI25NZNZQ7ZH6A3SA
+  secret_access_key:
+    secure: v9ivZdvv7Vn2HjbTzQT9v/eH61kr0CDP1Gq3VsOomvpq5EHPeva7NWDBh3nAPZieMmoPqeNDIVBTolpoPFYWbRzU1wD2Ic0sxdh/xehZ8e4Mj33IUYhN4NETk0MHI0HfjAKH18O6SIwyvhnqmejk6L5fVwrsrOzxRGVFJ5UyY/J350JglYLOf1i279CFFkGfyPeOFs0V6mCRJBP6cLUuczEx7exPzGFBJ6rqarmSHsdM322yaB49rJns+R9P1CGtOEp6ZAvuuPZjVezGbI6txk4jyhUMduW0xszeihevP25eKxq1RLDNtFZcx+o4mpl7o1bSg0i9cxFHe1sh+oflVTvyyYhzGnviU/dPl0h6uXW0a7qTKdkzRt1vQDjzoDNApM+9UakYFMPYW+lrKfpDld0oxHTftphCcvp8fw3O+cAzYQ4YsPytytLm8k7WXKTCEX3HkqZNe2zI4tET4FVcbuOyrBvzMguIPDuOu9syieJFgiG2d672Du3T/We+kSweAs+HIRyqo6idtvptKlLrer3cCdHls5y3gaOTHXB91ek3nazCBAr9HxZfJJ5JKLPw1f7N5ZKo9b7p3SxcWAlKjalCiHi9mOMNRn/R0qigQEqm4e94D0nEoiOX8rDstr2c+VTpYthBBUNakgfFiDLQfTXPqZGMNeQ/jGQa50hze8U=
+  bucket: lpil-web-dev-tut
+  local-dir: build
+  acl: public_read
+  skip_cleanup: true
+  detect_encoding: true
+  region: eu-west-1
+  endpoint: lpil-web-dev-tut.s3-website-eu-west-1.amazonaws.com
+  on:
+    repo: lpil/web-dev-intro
