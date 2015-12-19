@@ -2,7 +2,25 @@ require 'spec_helper'
 require 'code_block'
 
 RSpec.describe CodeBlock do
+
+  it 'reports the given code' do
+    block = described_class.new code: '1 + 1', language: 'ruby'
+    expect(block.code).to eq '1 + 1'
+  end
+
+
+  it 'reports the given identifier' do
+    block = described_class.new code: '', language: 'ruby', identifier: 'Hi'
+    expect(block.identifier).to eq 'Hi'
+  end
+
+
   describe '#language' do
+    it 'is optional' do
+      block = described_class.new code: '1 + 1'
+      expect(block.language).to eq nil
+    end
+
     it 'reports the given language' do
       block = described_class.new code: '1 + 1', language: 'ruby'
       expect(block.language).to eq 'ruby'
@@ -16,14 +34,6 @@ RSpec.describe CodeBlock do
     it 'handles nil' do
       block = described_class.new code: '1 + 1', language: nil
       expect(block.language).to eq nil
-    end
-  end
-
-
-  describe '#code' do
-    it 'reports the given language' do
-      block = described_class.new code: '1 + 1', language: 'ruby'
-      expect(block.code).to eq '1 + 1'
     end
   end
 
@@ -82,6 +92,12 @@ RSpec.describe CodeBlock do
     it 'is not equal with different language' do
       a = described_class.new code: '1 + 1', language: 'Elixir'
       b = described_class.new code: '1 + 1', language: 'Ruby'
+      expect(a).not_to eq b
+    end
+
+    it 'is not equal with different identifiers' do
+      a = described_class.new code: '', language: 'c', identifier: 'Hi'
+      b = described_class.new code: '', language: 'c', identifier: 'Bye'
       expect(a).not_to eq b
     end
   end

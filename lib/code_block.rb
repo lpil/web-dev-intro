@@ -1,9 +1,10 @@
 class CodeBlock
-  attr_reader :code, :language
+  attr_reader :code, :language, :identifier
 
-  def initialize(code:, language:)
-    @code     = code.freeze
-    @language = language.downcase.freeze if language
+  def initialize(code:, language: nil, identifier: nil)
+    @code       = code.freeze
+    @language   = language ? language.downcase.freeze : language
+    @identifier = identifier
   end
 
   def ruby?
@@ -12,6 +13,7 @@ class CodeBlock
 
   def ==(other)
     other.class == self.class &&
+      other.identifier == identifier &&
       other.language == language &&
       other.code == code
   end
