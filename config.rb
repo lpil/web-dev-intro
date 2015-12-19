@@ -1,8 +1,8 @@
+require_relative 'lib/helpers/layout_helpers'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
-
-config[:title] = 'TODO'
 
 # Per-page layout changes:
 #
@@ -33,16 +33,10 @@ configure :development do
   activate :livereload
 end
 
-###
-# Helpers
-###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers LayoutHelpers
+
 
 # Build-specific configuration
 configure :build do

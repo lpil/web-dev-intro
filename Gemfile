@@ -18,6 +18,8 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Markdown processor
 gem 'redcarpet', '~> 2.3'
 
+# Slim template language
+gem 'slim'
 
 group :development, :test do
   # Test framework
@@ -37,5 +39,4 @@ group :development, :test do
   # Lock rubocop parser to a specific version
   # https://github.com/bbatsov/rubocop/issues/1934
   gem 'parser', '~> 2.2.2.6'
-
 end
