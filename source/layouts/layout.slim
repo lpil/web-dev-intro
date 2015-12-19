@@ -10,4 +10,5 @@ html
     = stylesheet_link_tag :main
 
   body class="#{page_classes}"
-    = yield
+    .page-container
+      = yield

@@ -1,0 +1,12 @@
+exclude: []
+
+linters:
+  ColorVariable:
+    enabled: false
+
+  DeclarationOrder:
+    enabled: true
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM

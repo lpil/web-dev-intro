@@ -1,2 +1,5 @@
 /tutorials/an-introduction-to-sinatra/:
   title: An Introduction to Sinatra
+
+/tutorials/serving-web-pages-with-templates/:
+  title: Serving Web Pages with Templates
