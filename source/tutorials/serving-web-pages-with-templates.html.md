@@ -1,7 +1,5 @@
-So far we have learnt how to make a tiny web application with Sinatra, and
-learn how to create routes for different requests to our application, such as
-ones to `/` or `/about`. Let's now look as how we can go about serving web
-pages.
+Great, we've master routing, so let's now look as how we can go about serving
+web pages instead of little snippets of text.
 
 In order to continue we'll need to know enough HTML to make a simple web page,
 and understand what the more common HTML elements do. `<head>`, `<body>`,

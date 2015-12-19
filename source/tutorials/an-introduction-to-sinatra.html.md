@@ -11,6 +11,7 @@ Before you continue, make sure you'll completed the [HTML tutorial][html-tut],
 [vc-tut]: http://codebar.github.io/tutorials/version-control/introduction/tutorial.html
 [ruby-tut]: http://codebar.github.io/tutorials/ruby/lesson1/tutorial.html
 
+
 ## Installing Ruby
 
 Before you begin, you must have Ruby installed on your machine. There are a
@@ -92,6 +93,7 @@ and type in the URL bar `http://localhost:4567/`.
 Congratulations! You've made your first website, and are officially a web
 developer. Now is a good time to update your LinkedIn profile.
 
+
 ## What's happening here?
 
 When you run your Ruby script, a Sinatra server is started on your machine.
@@ -111,6 +113,7 @@ Stopping ...
 Refresh the page in your web browser- it's no longer available. Web servers,
 like any other computer program, only do what we tell them to do, and only work
 while they are running.
+
 
 ## Routes and URLs
 
@@ -137,13 +140,15 @@ Start up our server again with `ruby app.rb`, and navigate to
 `http://localhost:4567/about`- we've created a new page. Navigate back to
 `http://localhost:4567/`, our first page is still there.
 
+
 ### Mini challenge!
 
 Try making a few more routes for URLs of your choice, for example
 `http://localhost:4567/kittens`
 
+
 ## End of part one
 
-So today we've created our own simple web application using Ruby and Sinatra,
-and learnt a little bit about servers, routing, and the web. If there's
-anything you'd like explained in more detail, email me. :)
+Today we've created our own simple web application using Ruby and Sinatra,
+and learnt a little bit about servers, routing, and the web. Excellent. See
+you next time.

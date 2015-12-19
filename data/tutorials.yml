@@ -1,5 +1,8 @@
 /tutorials/an-introduction-to-sinatra/:
   title: An Introduction to Sinatra
 
+/tutorials/a-little-more-routing/:
+  title: A Little More Routing
+
 /tutorials/serving-web-pages-with-templates/:
   title: Serving Web Pages with Templates
