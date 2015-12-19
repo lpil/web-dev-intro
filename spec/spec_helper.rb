@@ -1,4 +1,6 @@
-$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
+ROOT_PATH = File.join(File.dirname(__FILE__), '..')
+
+$LOAD_PATH << File.join(ROOT_PATH, 'lib')
 
 FIXTURE_PATH = File.join(File.dirname(__FILE__), 'fixtures')
 
