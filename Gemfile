@@ -18,5 +18,16 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Markdown processor
 gem 'redcarpet', '~> 2.3'
 
-# Test framework
-gem 'rspec', '~> 3.0'
+
+group :development, :test do
+  # Test framework
+  gem 'rspec', '~> 3.0'
+
+  # Automatic test runner
+  gem 'guard-rspec'
+  gem 'guard-rubocop'
+
+  # Linters
+  gem 'rubocop'
+  gem 'rubocop-rspec'
+end
