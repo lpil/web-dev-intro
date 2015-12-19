@@ -1,7 +1,3 @@
----
-title: An Introduction to Sinatra
----
-
 ## What is Sinatra?
 
 Sinatra is a super simple framework for making websites using Ruby and HTML.
