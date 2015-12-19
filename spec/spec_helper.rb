@@ -1,3 +1,7 @@
+$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
+
+FIXTURE_PATH = File.join(File.dirname(__FILE__), 'fixtures')
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

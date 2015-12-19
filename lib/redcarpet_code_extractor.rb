@@ -11,7 +11,7 @@ class RedcarpetCodeExtractor < Redcarpet::Render::HTML
   )
 
   NO_OP_METHODS.each do |name|
-    define_method(name) do |*args|
+    define_method(name) do |*_args|
       nil
     end
   end
