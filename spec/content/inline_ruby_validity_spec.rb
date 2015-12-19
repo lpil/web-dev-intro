@@ -8,7 +8,7 @@ RSpec.describe 'inline Ruby code' do
 
   markdown_paths.each do |path|
     rel_path = Pathname.new(path).relative_path_from(
-      Pathname.new(ROOT_PATH)
+      Pathname.new(ROOT_PATH),
     ).to_s
 
     source   = File.read path
