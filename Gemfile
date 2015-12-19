@@ -27,11 +27,15 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-rubocop'
 
-  # Linters
+  # Ruby linter
   gem 'rubocop'
   gem 'rubocop-rspec'
+
+  # SCSS linter
+  gem 'scss_lint'
 
   # Lock rubocop parser to a specific version
   # https://github.com/bbatsov/rubocop/issues/1934
   gem 'parser', '~> 2.2.2.6'
+
 end

@@ -2,6 +2,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+config[:title] = 'TODO'
+
 # Per-page layout changes:
 #
 # With no layout
@@ -15,7 +17,7 @@ config[:markdown] = {
   smartypants: true,
 }
 
-config[:source] = 'web'
+config[:sass_assets_paths] = ['scss']
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -50,3 +52,5 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+activate :directory_indexes
