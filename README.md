@@ -18,10 +18,13 @@ bundle exec rubocop
 
 # Run the test watcher
 bundle exec guard
+
+# Run the compiler & server
+bundle exec middleman server
 ```
 
 
 ## Adding a new tutorial
 
-Stick it in `source/tutorials/` as a markdown file with the `.html.md`
-extension, and add an entry to `data/tutorials.yml`.
+* Add a markdown file with the `.html.md` extension to `source/tutorials/` 
+* Add an entry to `data/tutorials.yml`
