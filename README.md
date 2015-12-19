@@ -1,6 +1,8 @@
 An Introduction to Web Dev
 ==========================
 
+[![Build Status](https://travis-ci.org/lpil/web-dev-intro.svg?branch=master)](https://travis-ci.org/lpil/web-dev-intro)
+
 With Ruby & Sinatra
 
 
